@@ -1,0 +1,1 @@
+npx pwa-asset-generator public/piggy.svg public -m public/manifest.json --padding "calc(50vh - 25%)"-b "linear-gradient(135deg, #3b82f6, #ef4444)" -q 100 -i public/asset-generator-changes.html --favicon
