@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }) {
 
   return (
     <ApolloProvider client={apolloClient}>
-      <div className='' style={{ WebkitTapHighlightColor: 'transparent' }}>
+      <div className='text-red-500' style={{ WebkitTapHighlightColor: 'transparent' }}>
         <Head>
           <link rel='manifest' href='manifest.json' />
           <meta
