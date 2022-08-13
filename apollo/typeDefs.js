@@ -1,13 +1,32 @@
 import { gql } from '@apollo/client';
 
 export const typeDefs = gql`
-  type User {
+  type Category {
     id: ID!
     name: String!
-    status: String!
+    createdAt: String!
+    updatedAt: String!
+  }
+
+  type Note {
+    id: ID!
+    title: String!
+    body: String!
+    category: Category!
+    createdAt: String!
+    updatedAt: String!
   }
 
   type Query {
-    viewer: User
+    getCategories: [Category]
+    getNote(noteId: ID!): Note
+    getNotes(categoryId: ID!): [Note]
+  }
+
+  type Mutation {
+    createCategory(name: String!): Category!
+    deleteCategory(categoryId: ID!): String!
+    createNote(title: String!, body: String!, categoryId: ID!): Note!
+    deleteNote(noteId: ID!): String!
   }
 `;
