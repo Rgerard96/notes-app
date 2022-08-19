@@ -27,7 +27,7 @@ export default function App({ Component, pageProps }) {
             />
           </Head>
           <Navbar />
-          <div className='pt-20 standalone:pt-24'>
+          <div className='pt-20 standalone:pt-28'>
             <Component {...pageProps} />
           </div>
         </div>
