@@ -5,7 +5,7 @@ import CreateModal from './CreateModal';
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <div className='bg-yellow-400 w-full p-5 shadow-lg standalone:pt-16 fixed'>
+    <div className='bg-yellow-400 w-full p-5 shadow-lg standalone:pt-14 fixed'>
       <CreateModal open={open} setOpen={setOpen} />
       <div className='container mx-auto flex justify-between items-center'>
         <div className='font-bold text-xl flex space-x-3'>
