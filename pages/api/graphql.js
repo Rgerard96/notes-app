@@ -5,9 +5,6 @@ import dbConnect from '../../lib/dbConnect';
 
 const apolloServer = new ApolloServer({
   schema,
-  context(context) {
-    return context;
-  },
 });
 
 export const config = {

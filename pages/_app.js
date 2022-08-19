@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { ApolloProvider } from '@apollo/client';
 import { useApollo } from '../apollo/client';
 import { UserProvider } from '@auth0/nextjs-auth0';
+import Navbar from '../components/Navbar';
 
 export default function App({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState);
@@ -11,7 +12,7 @@ export default function App({ Component, pageProps }) {
     <UserProvider>
       <ApolloProvider client={apolloClient}>
         <div
-          className='text-red-500'
+          className='min-h-screen w-screen bg-gray-100'
           style={{ WebkitTapHighlightColor: 'transparent' }}
         >
           <Head>
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
               content='initial-scale=1, viewport-fit=cover, user-scalable=no'
             />
           </Head>
+          <Navbar />
           <Component {...pageProps} />
         </div>
       </ApolloProvider>

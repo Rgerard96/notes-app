@@ -7,16 +7,17 @@ export const resolvers = {
   Query: {
     async getCategories() {
       try {
-        const categories = await Category.find().sort({ createdAt: -1 });
+        const categories = await Category.find().sort({ updatedAt: -1 });
 
         return categories;
       } catch (error) {
         throw new Error(error);
       }
     },
-    async getNotes() {
+    async getNotes(_, { categoryId }) {
       try {
-        const notes = await Note.find()
+        const ObjectId = mongoose.Types.ObjectId;
+        const notes = await Note.find({ category: ObjectId(categoryId) })
           .populate('category')
           .sort({ createdAt: -1 });
 
