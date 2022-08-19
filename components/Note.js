@@ -2,9 +2,9 @@ import { PencilAltIcon, TrashIcon } from '@heroicons/react/outline';
 import React from 'react';
 import moment from 'moment';
 
-export default function Note({ item }) {
+export default function Note({ key, item }) {
   return (
-    <div className='bg-white rounded-xl p-5 shadow border'>
+    <div key={key} className='bg-white rounded-xl p-5 shadow border'>
       <h2 className='font-bold text-lg mb-3'>{item.title}</h2>
       <p>{item.body}</p>
       <div className='flex items-center justify-between mt-5'>

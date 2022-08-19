@@ -21,7 +21,7 @@ export default function Home() {
       <Breadcrumb />
       <div className='w-full max-w-lg mx-auto space-y-5'>
         {data.getCategories.map((item) => (
-          <Category item={item} />
+          <Category key={item.id} item={item} />
         ))}
       </div>
 

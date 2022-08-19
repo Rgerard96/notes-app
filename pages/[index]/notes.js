@@ -6,7 +6,7 @@ import NoData from '../../components/NoData';
 import Note from '../../components/Note';
 import { GET_NOTES } from '../../utils/graphql';
 
-export default function notes() {
+export default function Notes() {
   const router = useRouter();
 
   const path = router.asPath.split('/');
@@ -28,7 +28,7 @@ export default function notes() {
       {data.getNotes.length ? (
         <div className='grid lg:grid-cols-4 gap-5'>
           {data.getNotes.map((item) => (
-            <Note item={item} />
+            <Note key={item.id} item={item} />
           ))}
         </div>
       ) : (

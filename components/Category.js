@@ -3,9 +3,9 @@ import Link from 'next/link';
 import React from 'react';
 import moment from 'moment';
 
-export default function Category({ item }) {
+export default function Category({ key, item }) {
   return (
-    <div className='bg-white font-bold rounded-xl p-5 shadow border w-full text-center'>
+    <div key={key} className='bg-white font-bold rounded-xl p-5 shadow border w-full text-center'>
       <div className='flex items-center justify-between'>
         <Link href={`/${item.id}/notes`}>
           <h2 className='font-bold text-lg cursor-pointer'>{item.name}</h2>
