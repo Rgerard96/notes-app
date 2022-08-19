@@ -27,7 +27,9 @@ export default function App({ Component, pageProps }) {
             />
           </Head>
           <Navbar />
-          <Component {...pageProps} />
+          <div className='pt-20'>
+            <Component {...pageProps} />
+          </div>
         </div>
       </ApolloProvider>
     </UserProvider>

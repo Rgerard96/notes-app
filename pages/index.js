@@ -4,12 +4,13 @@ import Category from '../components/Category';
 import NoData from '../components/NoData';
 import { useQuery } from '@apollo/client';
 import { GET_CATEGORIES } from '../utils/graphql';
+import Loader from '../components/Loader';
 
 export default function Home() {
   const { loading, error, data } = useQuery(GET_CATEGORIES);
 
   console.log(data);
-  if (loading) return <h1>loading</h1>;
+  if (loading) return <Loader />;
   if (error) return <h1>error</h1>;
   return (
     <div className='p-5'>

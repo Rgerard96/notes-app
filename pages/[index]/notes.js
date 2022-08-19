@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import { useRouter } from 'next/router';
 import React from 'react';
 import Breadcrumb from '../../components/Breadcrumb';
+import Loader from '../../components/Loader';
 import NoData from '../../components/NoData';
 import Note from '../../components/Note';
 import { GET_NOTES } from '../../utils/graphql';
@@ -19,7 +20,7 @@ export default function Notes() {
 
   console.log(data);
 
-  if (loading) return <h1>loading</h1>;
+  if (loading) return <Loader />;
   if (error) return <h1>error</h1>;
 
   return (
