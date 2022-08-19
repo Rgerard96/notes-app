@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body{
+    background: #facc15;
+}
+
 .loader {
     border: 16px solid white;
     /* Light grey */
